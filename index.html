@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lighthouse City Church</title>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+     <a class="logo" href="#">
+  <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <path d="M32 6 L20 18 H28 V28 H36 V18 H44 L32 6 Z M18 24 V54 H46 V24 H34 V34 H30 V24 H18 Z" fill="currentColor"/>
+  </svg>
+  <span>Lighthouse City Church</span>
+</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="history.html" class="nav-link">History</a>
+        <a href="mission.html" class="nav-link">Mission</a>
+        <a href="about.html" class="nav-link">About</a>
+      </nav>
+      <button class="menu-toggle" aria-expanded="false" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>Welcome to Lighthouse City Church</h1>
+        <p>Shining hope into our community with love, service, and worship.</p>
+        <a class="cta" href="#membership">Join Us</a>
+      </div>
+    </section>
+
+    <section id="about" class="info container">
+      <h2>About Us</h2>
+      <p>Lighthouse City Church is dedicated to compassionate service, biblical teaching, and equipping people to follow Jesus. We welcome families, students, and everyone seeking spiritual growth.</p>
+    </section>
+
+    <section id="mission" class="info alt container">
+      <h2>Our Mission</h2>
+      <p>To be a beacon of hope—reaching, serving, and discipling our city through worship, outreach, and community transformation.</p>
+    </section>
+
+    <section id="history" class="info container">
+      <h2>History</h2>
+      <p>Founded to serve the local neighborhood, Lighthouse City Church has grown through community programs, consistent prayer, and a heart for people in need. We continue to build on that legacy.</p>
+    </section>
+
+    <section id="membership" class="membership container">
+      <div class="columns">
+        <div class="panel">
+          <h3>Member Login</h3>
+          <form id="loginForm" action="#" method="post" autocomplete="on">
+            <label for="loginEmail">Email</label>
+            <input id="loginEmail" name="email" type="email" required />
+            <label for="loginPassword">Password</label>
+            <input id="loginPassword" name="password" type="password" required minlength="6" />
+            <div class="form-row">
+              <label class="checkbox">
+                <input type="checkbox" name="remember" /> Remember me
+              </label>
+              <a class="link" href="#">Forgot?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+          </form>
+        </div>
+
+        <div class="panel">
+          <h3>Become a Member</h3>
+          <form id="registerForm" action="#" method="post" autocomplete="on">
+            <label for="fullName">Full Name</label>
+            <input id="fullName" name="name" type="text" required />
+
+            <label for="regEmail">Email</label>
+            <input id="regEmail" name="email" type="email" required />
+
+            <label for="phone">Phone (optional)</label>
+            <input id="phone" name="phone" type="tel" />
+
+            <label for="regPassword">Password</label>
+            <input id="regPassword" name="password" type="password" required minlength="6" />
+
+            <label for="reason">Why do you want to join?</label>
+            <textarea id="reason" name="reason" rows="3" placeholder="Short note (optional)"></textarea>
+
+            <div class="form-row">
+              <label class="checkbox">
+                <input type="checkbox" name="agree" required /> I agree to be contacted by Lighthouse City Church
+              </label>
+            </div>
+
+            <button type="submit" class="btn primary">Become Member</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+ 
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Lighthouse City Church</strong>
+        <p>Korle Gonno-Accra</p>
+         <div class="social">
+    <h1>social</h1>
+        <a href="https://web.facebook.com/photo/?fbid=122118188180718540&set=a.122094153686718540"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.youtube.com/@lcckorlegonnocathedral6080"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://www.instagram.com/lighthousecitychurchhq/"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+
+      </div>
+    </div>
+  </footer>
+  
+   <div class="last">
+    <p>&copy; lighthouse city church 2026 .|| All Rights Reserved.</p>
+  </div>
+   
+
+  <script>
+    // Simple nav toggle for small screens
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.site-nav');
+    toggle && toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('open');
+    });
+
+    // Basic client-side form demo handlers (no backend)
+    document.getElementById('loginForm').addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Login submitted (demo).');
+    });
+    document.getElementById('registerForm').addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Membership request submitted (demo).');
+    });
+  </script>
+</body>
+</html>
+  
